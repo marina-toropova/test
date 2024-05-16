@@ -75,7 +75,6 @@ a {
 
   .container {
     max-width: 1376px;
-    padding: 0;
   }
 
   /* Header */
@@ -381,12 +380,82 @@ a {
     background-color: inherit;
    }
 
-   .feedback__accordion-button.accordion-button .form-label,
-   .feedback__accordion-button.accordion-button button {
+   .feedback__accordion-body label,
+   .feedback__accordion-body button {
     width: 100%;
    }
 
    .btn.btn-primary.mb-3,
    .mb-3 {
     margin-bottom: 0!important;
+    padding: -32px;
    }
+
+   /* Map */
+
+   .map__container {
+    background-color: var(--white);
+    margin-top: 32px;
+    padding: 0 32px 32px;
+   }
+
+   .map__title {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+   }
+
+   .map__col-10 {
+    padding: 18px 0;
+   }
+
+   .map__col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+   }
+
+   .map__button {
+    border: none;
+    background-color: transparent;
+   }
+
+   .map__box {
+    height: 480px;
+    width: 100%;
+    background-color: var(--white);
+    position: relative;
+   }
+
+   .spinner {
+    display: block;
+    width: 143px;
+    height: 143px;
+    position: absolute;
+    top: 25%;
+    left: 45%;
+
+    border: 12px solid var(--black);
+    border-top-color: transparent;
+    border-radius: 50%;
+
+    animation: spin 1s infinite linear;
+ }
+ 
+.spinner:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 4px;
+    left: -5px;
+    border: 10px solid var(--black);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(3deg);
+}
+
+@keyframes spin {
+        to { transform: rotate(360deg); }
+    }​
