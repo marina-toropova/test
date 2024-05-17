@@ -46,4 +46,4 @@ const mainPinIcon = L.icon({
     mainPinMarker.addTo(map);
   };
 
-export { loadMap };
+export { map, loadMap };
